@@ -15,8 +15,8 @@ module OpenWeather
 
     def parse_weather(todays_forecast)
       todays_forecast.each do |time|
-        Weather.new(
-          type: time['weather'].first['description'],
+        Weather.create(
+          weather_type: time['weather'].first['description'],
           wind_speed: time['wind']['speed'],
           temperature: time['main']['temp'],
           time: time['dt_txt'].to_datetime
