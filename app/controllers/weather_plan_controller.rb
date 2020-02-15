@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 class WeatherPlanController < ApplicationController
+  HAMBURG_ID = '2911298'
+
   def index
-    OpenWeather::Forecast.find_by_location('London,us')
+    OpenWeather::Forecast.find_by_location(HAMBURG_ID)
     @weather = Weather.all
     @response = {
       weather: @weather,
