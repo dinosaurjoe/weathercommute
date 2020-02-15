@@ -1,0 +1,13 @@
+<div class="banner"
+    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url(<%= asset_path "transportation_types/#{@response[:mode_of_transportation]}.jpg" %>)">
+  <div class="container">
+    <h1>Today you should take the: </h1>
+    <p><%= @response[:mode_of_transportation] %></p>
+  </div>
+</div>
+
+<div class="cards">
+    <% @response[:weather].each do |weather| %>
+        <%= render :partial => 'weather_card', locals: { weather: weather } %>
+    <% end %>
+</div>

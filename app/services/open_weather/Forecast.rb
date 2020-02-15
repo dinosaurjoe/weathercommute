@@ -4,7 +4,7 @@ module OpenWeather
   class Forecast < Base
     def self.find_by_location(location)
       response = OpenWeather::Request.get(location)
-      todays_forecast = response['list'].first(5)
+      todays_forecast = response['list'].first(6)
       Forecast.new(todays_forecast)
     end
 
@@ -19,9 +19,14 @@ module OpenWeather
           weather_type: time['weather'].first['description'],
           wind_speed: time['wind']['speed'],
           temperature: time['main']['temp'],
-          time: time['dt_txt'].to_datetime
+          time: time['dt_txt'].to_datetime,
+          type_code: type_code(time['weather'].first['id'])
         )
       end
+    end
+
+    def type_code(original_code)
+      original_code.to_s.split('').first.to_i * 100
     end
   end
 end
