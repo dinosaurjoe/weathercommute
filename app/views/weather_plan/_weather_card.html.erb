@@ -1,4 +1,6 @@
   <div class="card-category" 
     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path "weather_types/#{weather.type_code}.jpg" %>)">
-    <p><%= weather.time.strftime('%H:%M') %> <%= weather.weather_type.split.map(&:capitalize).join(' ') %></p>
+    <div class="card-text">
+      <p><%= weather.time.strftime('%H:%M') %> / <%= weather.weather_type.split.map(&:capitalize).join(' ') %></p>
+    </div>
   </div>

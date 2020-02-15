@@ -1,8 +1,10 @@
 <div class="banner"
     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url(<%= asset_path "transportation_types/#{@response[:mode_of_transportation]}.jpg" %>)">
   <div class="container">
-    <h1>Today you should take the: </h1>
-    <p><%= @response[:mode_of_transportation] %></p>
+    <h1>Today you should take the </h1>
+    <h1 class="underline">/////<%= @response[:mode_of_transportation] %></h1>
+    <h1>and wear a</h1>
+    <h1>/// <%= @response[:choice_of_clothing] %></h1>
   </div>
 </div>
 

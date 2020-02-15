@@ -12,6 +12,29 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 0px;
+  -webkit-filter: brightness(100%);
+}
+
+.cards :hover {
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.card-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0px;
+  -webkit-filter: brightness(100%);
+  z-index: 10;
+  -webkit-filter: brightness(100%) !important;
+}
+
+.card-text :hover{
+    -webkit-filter: brightness(100%) !important;
 }
 
 // Smallest device
@@ -66,6 +89,7 @@ body {
 }
 
 .banner {
+  text-align: left;
   background-size: cover;
   background-position: center;
   padding: 150px 0;
@@ -77,6 +101,7 @@ body {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  margin: 10px;
 }
 
 .banner p {

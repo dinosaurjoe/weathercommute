@@ -4,6 +4,9 @@ module Deciders
   class Base
     TOO_COLD = 273.15
     STORMS = ['thunderstorm', 'rain', 'shower rain', 'snow'].freeze
+    def initialize(weather)
+      @weather = weather
+    end
 
     private
 

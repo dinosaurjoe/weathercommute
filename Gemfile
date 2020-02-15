@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'
 gem 'faraday'
-
+gem "font-awesome-rails"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -37,6 +37,7 @@ gem 'jquery-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'dotenv-rails', require: 'dotenv/rails-now'
+  gem 'rspec-rails'
   gem 'pry'
 end
 
