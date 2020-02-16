@@ -11,8 +11,8 @@
       <%= render :partial => 'weather_icon', locals: { weather: weather.first } %>
      </p>
   </div>
-  <div class="navitem">
-     <p> Current Time: <%= Time.now.localtime.strftime('%H:%M') %> </p>
+  <div class="navitem" id="time">
+   <%= react_component("HelloWorld", props: { name: "Stranger" }) %>
   </div>
   <div class="navitem">
      <p> Hamburg, DE </p>
