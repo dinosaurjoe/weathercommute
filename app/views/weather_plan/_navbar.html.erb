@@ -1,0 +1,18 @@
+<div class="navbar container grid">
+  <div class="navitem">
+    / <p> Current Time: <%= Time.now.utc.strftime('%H:%M') %> </p>
+  </div>
+  <div class="navitem">
+    / <p> City: Hamburg </p>
+  </div>
+  <div class="navitem">
+    /
+    <p>
+      Now: <%= @temperature_summary[:temperature_now] %> C° /
+      Low: <%= @temperature_summary[:low] %> C° / 
+      High: <%= @temperature_summary[:high] %> C°
+     </p>
+  </div>
+  <div class="navitem">
+  </div>
+</div>

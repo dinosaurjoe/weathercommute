@@ -1,0 +1,22 @@
+.navbar {
+  top: 0;
+  position: absolute;
+  width: 100%;
+//   background-color: white !important;
+//   border-bottom: 2px solid white;
+  color: white;
+  border-radius: 0;
+  opacity: 1 !important;
+  z-index: 1;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: left;
+}
+.navitem {
+  grid-gap: 0px;
+  position: relative;
+}
+.navbar:link {
+    color: white;
+}
