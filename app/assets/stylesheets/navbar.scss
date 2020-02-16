@@ -10,12 +10,21 @@
   z-index: 1;
   justify-content: space-between;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto auto;
   text-align: left;
+}
+
+.navbar p {
+    font-size: 14px;
+    font-weight: bold;
 }
 .navitem {
   grid-gap: 0px;
   position: relative;
+}
+
+.navfirst {
+    grid-column-start: 1;
 }
 .navbar:link {
     color: white;

@@ -1,12 +1,5 @@
 <div class="navbar container grid">
-  <div class="navitem">
-    / <p> Current Time: <%= Time.now.utc.strftime('%H:%M') %> </p>
-  </div>
-  <div class="navitem">
-    / <p> City: Hamburg </p>
-  </div>
-  <div class="navitem">
-    /
+  <div class="navitem navfirst">
     <p>
       Now: <%= @temperature_summary[:temperature_now] %> C° /
       Low: <%= @temperature_summary[:low] %> C° / 
@@ -14,5 +7,12 @@
      </p>
   </div>
   <div class="navitem">
+    <%= icon('fas', 'cloud') %>
+  </div>
+  <div class="navitem">
+     <p> Current Time: <%= Time.now.localtime.strftime('%H:%M') %> </p>
+  </div>
+  <div class="navitem">
+     <p> Hamburg, DE </p>
   </div>
 </div>
