@@ -4,7 +4,7 @@ module OpenWeather
   class Forecast < Base
     def self.find_by_location(location)
       response = OpenWeather::Request.get(location)
-      todays_forecast = response['list'].first(6)
+      todays_forecast = response['list'].first(5)
       Forecast.new(todays_forecast)
     end
 

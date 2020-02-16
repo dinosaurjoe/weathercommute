@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class WeatherPlanController < ApplicationController
+class DashboardController < ApplicationController
   HAMBURG_ID = '2911298'
 
   def index
@@ -11,9 +11,10 @@ class WeatherPlanController < ApplicationController
       weather: @weather,
       mode_of_transportation: Deciders::Transportation.new(@weather).decide,
       temperature_summary: @temperature_summary,
+      news: NewsApi::NewsToday.find_by_query('')[0,5],
       choice_of_clothing: Deciders::Clothing.new(@temperature_summary[:low]).decide
     }
-    @weather.order('id desc').offset(6).destroy_all
+    @weather.order('id desc').offset(5).destroy_all
   end
 
   private

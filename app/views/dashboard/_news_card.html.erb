@@ -1,0 +1,9 @@
+<%= link_to(story.url, html_options = {target: "_blank"}) do %>
+  <div class="card-category" 
+    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<%= story.urlToImage %>)">
+    <div class="story-text">
+      <p><%= story.description %></p>
+    </div>
+  </div>
+<% end %>
+

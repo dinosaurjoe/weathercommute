@@ -11,7 +11,15 @@
 </div>
 
 <div class="cards">
+    <h1 class="header-card">Forecast</h1>
     <% @response[:weather].each do |weather| %>
         <%= render :partial => 'weather_card', locals: { weather: weather } %>
+    <% end %>
+</div>
+
+<div class="cards">
+    <h1 class="header-card">Top Stories</h1>
+    <% @response[:news].each do |story| %>
+        <%= render :partial => 'news_card', locals: {story: story} %>
     <% end %>
 </div>
