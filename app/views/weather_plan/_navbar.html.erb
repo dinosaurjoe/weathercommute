@@ -7,7 +7,9 @@
      </p>
   </div>
   <div class="navitem">
-    <%= icon('fas', 'cloud') %>
+       <p>
+      <%= render :partial => 'weather_icon', locals: { weather: weather.first } %>
+     </p>
   </div>
   <div class="navitem">
      <p> Current Time: <%= Time.now.localtime.strftime('%H:%M') %> </p>

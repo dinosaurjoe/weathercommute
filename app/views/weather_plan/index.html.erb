@@ -1,4 +1,4 @@
-<%= render :partial => 'navbar', locals: { weather: @temperature_summary } %>
+<%= render :partial => 'navbar', locals: { temperature_summary: @temperature_summary, weather: @weather } %>
 
 <div class="banner"
     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url(<%= asset_path "transportation_types/#{@response[:mode_of_transportation]}.jpg" %>)">

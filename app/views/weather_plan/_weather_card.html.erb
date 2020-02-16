@@ -3,4 +3,7 @@
     <div class="card-text">
       <p><%= weather.time.strftime('%H:%M') %> / <%= weather.weather_type.split.map(&:capitalize).join(' ') %></p>
     </div>
+    <div>
+      <p><%= render :partial => 'weather_icon', locals: { weather: weather } %> </p>
+    </div>
   </div>

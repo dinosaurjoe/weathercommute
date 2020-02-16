@@ -26,6 +26,8 @@ module OpenWeather
     end
 
     def type_code(original_code)
+      return original_code + 100 if original_code == 800
+
       original_code.to_s.split('').first.to_i * 100
     end
   end
